@@ -2,12 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   '@commitlint/cli': ^17.2.0
-  '@commitlint/config-conventional': ^17.2.0
+  commitlint-config-git-commit-emoji: ^1.0.0
   husky: ^8.0.1
 
 devDependencies:
   '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.2.0
-  '@commitlint/config-conventional': registry.npmmirror.com/@commitlint/config-conventional/17.2.0
+  commitlint-config-git-commit-emoji: registry.npmmirror.com/commitlint-config-git-commit-emoji/1.0.0
   husky: registry.npmmirror.com/husky/8.0.1
 
 packages:
@@ -59,15 +59,6 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
-    dev: true
-
-  registry.npmmirror.com/@commitlint/config-conventional/17.2.0:
-    resolution: {integrity: sha512-g5hQqRa80f++SYS233dbDSg16YdyounMTAhVcmqtInNeY/GF3aA4st9SVtJxpeGrGmueMrU4L+BBb+6Vs5wrcg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@commitlint/config-conventional/-/config-conventional-17.2.0.tgz}
-    name: '@commitlint/config-conventional'
-    version: 17.2.0
-    engines: {node: '>=v14'}
-    dependencies:
-      conventional-changelog-conventionalcommits: registry.npmmirror.com/conventional-changelog-conventionalcommits/5.0.0
     dev: true
 
   registry.npmmirror.com/@commitlint/config-validator/17.1.0:
@@ -480,6 +471,12 @@ packages:
     version: 1.1.4
     dev: true
 
+  registry.npmmirror.com/commitlint-config-git-commit-emoji/1.0.0:
+    resolution: {integrity: sha512-AnWvAu50BZ2ikzlsECKya4nAvPdu62RC3U/8wmb8TlSiLbaLrz10jV8On/8tc2UW1C9ckuLQx3WkLhaiFcvPhg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/commitlint-config-git-commit-emoji/-/commitlint-config-git-commit-emoji-1.0.0.tgz}
+    name: commitlint-config-git-commit-emoji
+    version: 1.0.0
+    dev: true
+
   registry.npmmirror.com/compare-func/2.0.0:
     resolution: {integrity: sha512-zHig5N+tPWARooBnb0Zx1MFcdfpyJrfTJ3Y5L+IFvUm8rM74hHz66z0gw0x4tijh5CorKkKUCnW82R2vmpeCRA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/compare-func/-/compare-func-2.0.0.tgz}
     name: compare-func
@@ -496,17 +493,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       compare-func: registry.npmmirror.com/compare-func/2.0.0
-      q: registry.npmmirror.com/q/1.5.1
-    dev: true
-
-  registry.npmmirror.com/conventional-changelog-conventionalcommits/5.0.0:
-    resolution: {integrity: sha512-lCDbA+ZqVFQGUj7h9QBKoIpLhl8iihkO0nCTyRNzuXtcd7ubODpYB04IFy31JloiJgG0Uovu8ot8oxRzn7Nwtw==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-5.0.0.tgz}
-    name: conventional-changelog-conventionalcommits
-    version: 5.0.0
-    engines: {node: '>=10'}
-    dependencies:
-      compare-func: registry.npmmirror.com/compare-func/2.0.0
-      lodash: registry.npmmirror.com/lodash/4.17.21
       q: registry.npmmirror.com/q/1.5.1
     dev: true
 
