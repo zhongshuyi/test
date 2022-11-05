@@ -12,6 +12,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
     "commitlint-config-git-commit-emoji": "^1.0.0",
+    "cz-customizable": "^7.0.0",
     "husky": "^8.0.1"
   }
 }
