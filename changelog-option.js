@@ -2,23 +2,18 @@ const compareFunc = require("compare-func");
 module.exports = {
     writerOpts: {
         transform: (commit, context) => {
-            
 
             let discard = true;
             const issues = [];
 
-            
-            commit.notes.forEach((note) => {
-                note.title = "BREAKING CHANGES";
-                discard = false;
-            });
+            if (commit.body  && commit.body.indexOf("🚧 BREAKING CHANGES 🚧")) {
+                discard = false
+            }
 
             if (!commit.type) {
-                let headerPattern = /^(?<type>.*\s\w*)(?:\((?<scope>.*)\))?!?:\s(?<subject>(?:(?!#).)*(?:(?!\s).))$/g;
+                let headerPattern = /^(?<type>.*\s\w*)(?:\((?<scope>.*)\))?!?:\s(?<subject>(?:(?!#).)*(?:(?!\s).))$/;
                 commit.type = ("" + commit.header).replace(headerPattern, "$1");
             }
-                console.log(commit.type);
-
 
             if (commit.type === "✨ feat" || commit.type === "feat") {
                 commit.type = "✨ Features | 新功能";
@@ -28,8 +23,6 @@ module.exports = {
                 commit.type = "⚡ Performance Improvements | 性能优化";
             } else if (commit.type === "⏪ revert" || commit.type === "revert" || commit.revert) {
                 commit.type = "⏪ Reverts | 回退";
-            } else if (discard) {
-                return;
             } else if (commit.type === "📃 docs" || commit.type === "docs") {
                 commit.type = "📃 Documentation | 文档";
             } else if (commit.type === "🌈 style" || commit.type === "style") {
