@@ -13,10 +13,10 @@ module.exports = {
         { value: "🐎 ci", name: "🐎 ci      : 对 CI 配置文件或脚本进行了修改,持续集成相关文件修改" },
         { value: "🐳 chore", name: "🐳 chore   : 其他修改（不在上述类型中的修改）" },
         { value: "🔄 revert", name: "🔄 revert  : 当前 commit 用于撤销以前的 commit，后面跟着被撤销 Commit 的 Header" },
-        { value: "⚙️ wip", name: "⚙️ wip      : 开发中" },
-        { value: "🪢 workflow", name: "🪢  workflow : 工作流修改" },
+        { value: "🚧 wip", name: "🚧 wip     : 开发中" },
+        { value: "🗃️ workflow", name: "🩺 workflow: 工作流修改" },
         { value: "📦 types", name: "📦 types   : 类型修改" },
-        { value: "🪧 release", name: "🪧  release  : 发布新版本" },
+        { value: "🪧 release", name: "🪧  release : 发布新版本" },
     ],
     messages: {
         type: "选择一种你的提交类型:",
@@ -31,7 +31,7 @@ module.exports = {
     // 破坏性更新时前缀
     breakingPrefix: "🚧 BREAKING CHANGES 🚧",
     // 这些选项触发破坏性更新选项
-    allowBreakingChanges: ["feat", "fix", "chore"],
+    allowBreakingChanges: ["✨ feat", "🐞 fix", "🐳 chore"],
     // ISSUE 前缀
     footerPrefix: "CLOSES ISSUE:",
     subjectLimit: 100,

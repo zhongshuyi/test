@@ -1,62 +1,37 @@
 ## 1.0.1 (2022-11-06)
 
 
-### ✨ Features
+### ⏪ Reverts | 回退
 
-* feat: 对当当当当 3b7ed02
-* feat: sdasdasddd edb05d1
-* feat(aa): dsadasdasd e504343
-* feat(custom): 新增一个bug e18ded3
+* ⏪ revert: 回退 ff8f679
 
 
-### 🐛 Bug Fixes
+### ⚙️ wip
 
-* fix: 修复一个bug 6296c9d
-
-
-### 🏗 Chore
-
-* wip: sdasd 908bced
+* ⚙️ wip: sdasd 908bced
 
 
-## 1.0.1 (2022-11-06)
+### ✨ Features | 新功能
+
+* ✨ feat(aa): dsadasdasd e504343
+* ✨ feat: 对当当当当 3b7ed02
+* ✨ feat(custom): 新增一个bug e18ded3
+* ✨ feat: sdasdasddd edb05d1
 
 
-### ✨ Features
+### 🐞 Bug Fixes | Bug 修复
 
-* feat: 对当当当当 3b7ed02
-* feat: sdasdasddd edb05d1
-* feat(aa): dsadasdasd e504343
-* feat(custom): 新增一个bug e18ded3
+* 🐞 fix: 修复一个bug 6296c9d
 
 
-### 🐛 Bug Fixes
+### 🐳 Chores | 其他更新
 
-* fix: 修复一个bug 6296c9d
-
-
-### 🏗 Chore
-
-* wip: sdasd 908bced
+* lint on commitmsg dc58306
 
 
-## 1.0.1 (2022-11-06)
+### 📦 types
 
-
-### ✨ Features
-
-* feat: 对当当当当 3b7ed02
-* feat: sdasdasddd edb05d1
-* feat(aa): dsadasdasd e504343
-* feat(custom): 新增一个bug e18ded3
-
-
-### 🏗 Chore
-
-* wip: sdasd 908bced
-
-
-## 1.0.1 (2022-11-06)
+* 📦 types: asdasd 8ad6493
 
 
 

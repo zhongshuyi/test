@@ -2,37 +2,48 @@ const compareFunc = require("compare-func");
 module.exports = {
     writerOpts: {
         transform: (commit, context) => {
+            
+
             let discard = true;
             const issues = [];
 
+            
             commit.notes.forEach((note) => {
                 note.title = "BREAKING CHANGES";
                 discard = false;
             });
-            if (commit.type === "✨ feat") {
+
+            if (!commit.type) {
+                let headerPattern = /^(?<type>.*\s\w*)(?:\((?<scope>.*)\))?!?:\s(?<subject>(?:(?!#).)*(?:(?!\s).))$/g;
+                commit.type = ("" + commit.header).replace(headerPattern, "$1");
+            }
+                console.log(commit.type);
+
+
+            if (commit.type === "✨ feat" || commit.type === "feat") {
                 commit.type = "✨ Features | 新功能";
-            } else if (commit.type === "fix") {
-                commit.type = "🐛 Bug Fixes | Bug 修复";
-            } else if (commit.type === "perf") {
+            } else if (commit.type === "🐞 fix" || commit.type === "fix") {
+                commit.type = "🐞 Bug Fixes | Bug 修复";
+            } else if (commit.type === "⚡ perf" || commit.type === "perf") {
                 commit.type = "⚡ Performance Improvements | 性能优化";
-            } else if (commit.type === "revert" || commit.revert) {
+            } else if (commit.type === "⏪ revert" || commit.type === "revert" || commit.revert) {
                 commit.type = "⏪ Reverts | 回退";
             } else if (discard) {
                 return;
-            } else if (commit.type === "docs") {
-                commit.type = "📝 Documentation | 文档";
-            } else if (commit.type === "style") {
-                commit.type = "💄 Styles | 风格";
-            } else if (commit.type === "refactor") {
-                commit.type = "♻ Code Refactoring | 代码重构";
-            } else if (commit.type === "test") {
-                commit.type = "✅ Tests | 测试";
-            } else if (commit.type === "build") {
-                commit.type = "👷‍ Build System | 构建";
-            } else if (commit.type === "ci") {
-                commit.type = "🔧 Continuous Integration | CI 配置";
-            } else if (commit.type === "chore") {
-                commit.type = "🎫 Chores | 其他更新";
+            } else if (commit.type === "📃 docs" || commit.type === "docs") {
+                commit.type = "📃 Documentation | 文档";
+            } else if (commit.type === "🌈 style" || commit.type === "style") {
+                commit.type = "🌈 Styles | 风格";
+            } else if (commit.type === "🦄 refactor" || commit.type === "refactor") {
+                commit.type = "🦄 Code Refactoring | 代码重构";
+            } else if (commit.type === "🧪 test" || commit.type === "test") {
+                commit.type = "🧪 Tests | 测试";
+            } else if (commit.type === "🔧 build" || commit.type === "build") {
+                commit.type = "🔧‍ Build System | 构建";
+            } else if (commit.type === "🐎 ci" || commit.type === "ci") {
+                commit.type = "🐎 Continuous Integration | CI 配置";
+            } else if (commit.type === "🐳 chore" || commit.type === "chore") {
+                commit.type = "🐳 Chores | 其他更新";
             }
 
             if (commit.scope === "*") {

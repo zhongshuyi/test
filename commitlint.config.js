@@ -1,5 +1,10 @@
 module.exports = {
-    extends: ["git-commit-emoji"],
+    parserPreset: {
+        parserOpts: {
+            headerPattern: /^(?<type>.*\s\w*)(?:\((?<scope>.*)\))?!?:\s(?<subject>(?:(?!#).)*(?:(?!\s).))$/,
+            headerCorrespondence: ["type", "scope", "subject"],
+        },
+    },
     // ↓自定义提交消息规则 官方文档： https://commitlint.js.org/#/reference-rules
     rules: {
         // ↓body以空白行开头
@@ -40,9 +45,9 @@ module.exports = {
                 // 当前 commit 用于撤销以前的 commit，后面跟着被撤销 Commit 的 Header
                 "⏪ revert",
                 // 开发中
-                "⚙️ wip",
+                "🚧 wip",
                 // 工作流修改
-                "🪢 workflow",
+                "🗃️ workflow",
                 // 类型修改
                 "📦 types",
                 // 发布新版本
