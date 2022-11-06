@@ -22,7 +22,7 @@ module.exports = {
                 // 修复 bug
                 "🐞 fix",
                 // 提高性能的代码更改
-                "🎈 perf",
+                "⚡ perf",
                 // 不影响代码含义的修改，比如空格、格式化、缺失的分号等
                 "🌈 style",
                 // 对文档进行了修改
@@ -38,7 +38,7 @@ module.exports = {
                 // 其他修改（不在上述类型中的修改）
                 "🐳 chore",
                 // 当前 commit 用于撤销以前的 commit，后面跟着被撤销 Commit 的 Header
-                "↩ revert",
+                "⏪ revert",
                 // 开发中
                 "⚙️ wip",
                 // 工作流修改
